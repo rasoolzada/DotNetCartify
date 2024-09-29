@@ -1,13 +1,12 @@
-﻿using DotNetCartify.Data;
-using DotNetCartify.Models;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DotNetCartify.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using Bulky.DataAccess;
+using Bulky.Models;
+namespace Bulky.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db) {
+        private readonly DataAccess.Data.ApplicationDbContext _db;
+        public CategoryController(DataAccess.Data.ApplicationDbContext db) {
             _db = db;
         }
         public IActionResult Index()
